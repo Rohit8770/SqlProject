@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main_layout"
+    android:background="@color/light3"
+    android:layout_height="match_parent"
+    tools:context=".SqlActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_290sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_3ssp"
+        android:elevation="@dimen/_7ssp"
+        app:cardCornerRadius="@dimen/_10ssp">
+
+        <ImageView
+            android:layout_width="@dimen/_35ssp"
+            android:layout_marginTop="@dimen/_4ssp"
+            android:layout_marginLeft="@dimen/_7ssp"
+            android:layout_height="@dimen/_30ssp"
+            android:src="@drawable/new_watch" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="@dimen/_5ssp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgLock"
+                android:layout_width="@dimen/_30ssp"
+                android:layout_height="@dimen/_30ssp"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/_7ssp"
+                android:src="@drawable/lock_unlock"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/_3ssp"
+                android:text="Off"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/etSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_2ssp"
+                android:text="ON"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10ssp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="@dimen/_7ssp">
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/light1"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/yellow"
+        app:tabIndicatorHeight="3dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/white"
+        tools:ignore="MissingConstraints" >
+    </com.google.android.material.tabs.TabLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="7dp"/>
+
+
+</LinearLayout>
